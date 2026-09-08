@@ -1,36 +1,99 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Tony Chikezie — Portfolio
+
+A personal portfolio site built with Next.js, showcasing my work as a frontend developer. Includes light/dark mode, smooth scroll-reveal animations, and a fully responsive layout.
+
+**Live site:** [nextportfolio-lilac-chi.vercel.app](https://nextportfolio-lilac-chi.vercel.app)
+
+## Features
+
+- ⚡️ Built with Next.js (App Router)
+- 🎨 Light / dark mode toggle with persisted theme
+- 🧭 Responsive header with mobile sidebar navigation
+- ✨ Smooth scroll-triggered section reveal animations (Framer Motion)
+- 💬 Floating WhatsApp contact button
+- 📄 Downloadable resume (PDF)
+- 📱 Fully responsive across devices
+
+## Tech Stack
+
+**Frontend**
+- React
+- Next.js
+- TypeScript
+- Tailwind CSS
+- SCSS
+
+**Backend / Tooling**
+- Node.js
+- Express
+- Prisma
+- Git & GitHub
+- Vercel (deployment)
+
+## Sections
+
+- **Hero** — introduction and call to action
+- **About** — background and experience
+- **Skills** — tech stack overview
+- **Projects** — selected work
+- **Contact** — get in touch
+- **Footer** — site links and social
 
 ## Getting Started
 
-First, run the development server:
+Clone the repository and install dependencies:
+
+```bash
+git clone https://github.com/Aguero75/next_portfolio.git
+cd next_portfolio
+npm install
+```
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser to view the site.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+app/
+├── components/
+│   ├── Header.tsx
+│   ├── Hero.tsx
+│   ├── About.tsx
+│   ├── Skills.tsx
+│   ├── Projects.tsx
+│   ├── Contact.tsx
+│   ├── Footer.tsx
+│   ├── Whatsapp.tsx
+│   └── RevealSection.tsx
+├── page.tsx
+public/
+└── assets/
+```
 
-## Learn More
+## Deployment
 
-To learn more about Next.js, take a look at the following resources:
+This project is deployed on [Vercel](https://vercel.com). Every push to `main` triggers an automatic deployment.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To deploy your own copy:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm run build
+```
 
-## Deploy on Vercel
+Then follow the [Next.js deployment docs](https://nextjs.org/docs/app/building-your-application/deploying) or connect the repo directly to Vercel.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Connect
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- GitHub: [@Aguero75](https://github.com/Aguero75)
+- LinkedIn: [Tony Chikezie](https://www.linkedin.com/in/tony-chikezie-454b4b336/)
+- Twitter: [@iamtony75](https://x.com/iamtony75)
+
+## License
+
+This project is open source and available for reference. Feel free to fork it, but please don't reuse the personal content (resume, name, project details) as your own.
