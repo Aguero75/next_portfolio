@@ -1,6 +1,8 @@
-"use client"; // if using App Router
+"use client";
 
 import { useState, useEffect } from "react";
+
+const CONTACT_EMAIL = "tonychikezie75@gmail.com";
 
 export function usePortfolio() {
   // Dark mode
@@ -37,7 +39,7 @@ export function usePortfolio() {
   const openSidebar = () => setIsOpen(true);
   const closeSidebar = () => setIsOpen(false);
 
-  // Form validation
+  // Form validation + mail client handoff
   const [status, setStatus] = useState("");
 
   const handleFormSubmit = (e) => {
@@ -56,7 +58,22 @@ export function usePortfolio() {
       return;
     }
 
-    setStatus("✨ Message sent! I'll reply soon.");
+    // Build a mailto link so the user's own mail app/client sends the message
+    const subject = `Portfolio Contact from ${name}`;
+    const body = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${msg}`;
+
+    const mailtoLink = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
+      subject,
+    )}&body=${encodeURIComponent(body)}`;
+
+    const mailAnchor = document.createElement("a");
+    mailAnchor.href = mailtoLink;
+    mailAnchor.style.display = "none";
+    document.body.appendChild(mailAnchor);
+    mailAnchor.click();
+    document.body.removeChild(mailAnchor);
+
+    setStatus("✨ Opening your mail app... I'll reply soon!");
     e.target.reset();
     setTimeout(() => setStatus(""), 4000);
   };
@@ -72,7 +89,5 @@ export function usePortfolio() {
     // Form
     status,
     handleFormSubmit,
-    // Resume
-    downloadResume,
   };
 }

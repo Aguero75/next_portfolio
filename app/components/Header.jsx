@@ -2,6 +2,8 @@
 "use client";
 
 import React, { useEffect } from "react";
+import profile from "../icon.png";
+import Image from "next/image";
 
 const Header = () => {
   useEffect(() => {
@@ -179,7 +181,11 @@ const Header = () => {
           </div>
           <div className="text-center mb-6">
             <div className="w-24 h-24 mx-auto rounded-full bg-linear-to-br from-primary to-accent flex items-center justify-center text-white text-2xl font-bold">
-              TC
+              <Image
+                src={profile}
+                alt="profilephoto"
+                className="rounded-full"
+              />
             </div>
             <h3 className="mt-3 font-bold text-lg">Tony Chikezie</h3>
             <p className="text-primary text-sm">React & Next.js Dev</p>
