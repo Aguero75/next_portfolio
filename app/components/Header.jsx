@@ -124,8 +124,8 @@ const Header = () => {
               </button>
               <a
                 id="desktopDownloadBtn"
-                href="/Anthony.pdf"
-                download="Anthony_Chikezie_Resume.pdf"
+                href="/Anthony.docx"
+                download="Anthony_Chikezie_Resume.docx"
                 className="hidden md:inline-flex bg-primary text-white font-semibold px-5 py-2 rounded-full hover:bg-primary/80 transition items-center gap-2"
               >
                 <i className="fas fa-download"></i>Resume
@@ -225,7 +225,7 @@ const Header = () => {
           <div className="mt-auto pt-6">
             <a
               id="mobileDownloadBtn"
-              href="/Anthony.pdf"
+              href="/Anthony.docx"
               download="Anthony_Chikezie_Resume.pdf"
               className="w-full bg-primary text-white font-semibold py-2 rounded-full flex items-center justify-center gap-2"
             >

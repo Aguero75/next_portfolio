@@ -11,7 +11,7 @@ A personal portfolio site built with Next.js, showcasing my work as a frontend d
 - 🧭 Responsive header with mobile sidebar navigation
 - ✨ Smooth scroll-triggered section reveal animations (Framer Motion)
 - 💬 Floating WhatsApp contact button
-- 📄 Downloadable resume (PDF)
+- 📄 Downloadable resume (DOCX)
 - 📱 Fully responsive across devices
 
 ## Tech Stack
